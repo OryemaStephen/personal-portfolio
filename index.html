@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Stephen Oryema Fullstack Web Developer"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stephen Oryema</title>
+</head>
+<body>
+    <header>
+        <div class="logo">OS</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul id="nav-menu">
+                <li>
+                    <a href="#home" id="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="#portfolio" id="nav-link">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#resume" id="nav-link">Resume</a>
+                </li>
+                <li>
+                    <a href="#contact" id="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <main class="main-body">
+        <section id="home">
+            <div id="home-profile">
+                <p>Hello, I am</p>
+                <h3>Oryema Stephen.</h3>
+                <p>
+                    A fullstack web developer with 2 years experience in JavaScript and Python.
+                </p>
+                <p>
+                    I am currently learning Node.js.
+                </p>
+                <div class="social-profile">                    
+                    <a target="_blank" href="mailto:oryemasteve9@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/oryema-stephen-76b891133/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://github.com/OryemaStephen"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div id="home-img">
+                <img src="homepage.jpg" alt="Profile Photo" srcset="">
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill-list">
+                    <span>JavaScript</span>
+                    <span>CSS</span>
+                    <span>HTML</span>
+                    <span>Node.JS</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio"><br>
+            <h1 id="portfolio-header">
+                Portfolio  
+            </h1>
+            <div class="portfolio-grid">
+                <div class="portfolio-project">
+                    <a href="https://stephhomepage.netlify.app/" class="portfolio-link" target="_blank">
+                        <img class="protfolio-img" id="portfolio-img" src="landing-page.png" alt="Homepage for my website.">
+                        <h4 class="portfolio-caption">                       
+                            My homepage
+                        </h4>
+                        <p>
+                            My landing page for my browser for when I open the broswer.
+                        </p>
+                        </a>
+                </div>
+
+                <div class="portfolio-project">
+                    <a href="https://agrolimgroceriesug.netlify.app/" class="portfolio-link" target="_blank">
+                        <img class="protfolio-img" id="portfolio-img" src="agrolim.png" alt="Agrolim Groceries limited Uganda.">
+                        <h4 class="portfolio-caption">                       
+                            Agrolim Groceries Uganda Website.
+                        </h4>
+                        <p>
+                            An online shopping application 
+                            that helps you get the item of your choice 
+                            delivered to your doorstep.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="portfolio-project">
+                    <a href="https://yoroom.netlify.app/" class="portfolio-link" target="_blank">
+                        <img class="protfolio-img" id="portfolio-img" src="yorum.png" alt="Agrolim Groceries limited Uganda.">
+                        <h4 class="portfolio-caption">                       
+                            Yorum Technologies limited.
+                        </h4>
+                        <p>
+                            This is a software-based solution that quickly matches tenants looking for rentals.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="portfolio-project">
+                    <a href="https://agrolimgroceriesug.netlify.app/" class="portfolio-link" target="_blank">
+                        <img class="protfolio-img" id="portfolio-img" src="massage.png" alt="Agrolim Groceries limited Uganda.">
+                        <h4 class="portfolio-caption">                       
+                            Massage website landing page.
+                        </h4>
+                        <p>
+                            The art of massage—a symphony of kneading and pressure, a 
+                            tranquil journey to relaxation guided by a skilled therapist's hands. 
+                        </p>
+                    </a>
+                </div>
+
+                <div class="portfolio-project">
+                    <a href="https://bmicalculatorh.netlify.app/" class="portfolio-link" target="_blank">
+                        <img class="portfolio-img" id="portfolio-img" src="bmi.png" alt="BMI Calculator.">
+                        <h4 class="portfolio-caption">                       
+                            BMI Calculator
+                        </h4>
+                        <p>
+                            BMI Calculator for kepping tab of your health. It helps categorize your status.
+                        </p>
+                    </a>
+                </div>
+            </div>             
+            <a href="https://github.com/OryemaStephen" target="_blank">
+                <button class="button">Show All
+                    <span>&rarr;</span>                        
+                </button>
+            </a>
+        </section>
+
+        <section id="resume">
+            <h1>Resume</h1>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <span>&copy;</span>
+        </address>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
