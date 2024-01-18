@@ -76,7 +76,7 @@ section {
 }
 
 h1,h3 {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 #home {
@@ -101,21 +101,7 @@ h1,h3 {
 
 #home-profile > h3 {
     margin-bottom: 25px;
-    font-size: 1.7em;
-}
-
-.social-profile {
-    width: 100%;
-}
-.social-profile a{
-    margin: 20px;
-    color: #0d0c0c;
-    width: 20px;
-}
-
-.social-profile a i:hover{
-    transform: scale(1.1);
-    color: #726f6f;
+    font-size: 1.4em;
 }
 
 #home-img {
@@ -130,8 +116,32 @@ h1,h3 {
     border: 1px solid rgb(117, 119, 121);
 }
 
+#home-profile .button {
+    width: 200px;
+    border: 2px solid rgb(194, 194, 194);
+    background: rgb(194, 194, 194);
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.3em;
+    padding-bottom: 7px;
+    
+}
+
+#home-profile .button a{
+    color: #0d0c0c;
+    text-decoration: none;
+    font-size: 0.7em;
+    padding: 0;
+}
+
+#home-profile .button:hover, .button.active {
+    transform: scaleX(1.05);
+}
+
 .skills {
-    margin: 40px auto;
+    margin: 10px auto;
     width: 100%;
     height: fit-content;
 }
@@ -144,14 +154,19 @@ h1,h3 {
 .skill-list {
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5px;
 }
 .skill-list > span{
     font-size: 1.3em;
-    margin: 40px 5px;
+    margin: 20px 10px;
     border: 2px solid rgb(194, 194, 194);
     background: rgb(194, 194, 194);
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex: 0 0 calc(33.33% - 30px);
 }
 
 #portfolio {
@@ -206,9 +221,8 @@ h1,h3 {
 }
 
 .button {
-    width: 150px;
-    font-weight: bold;
-    margin: 20px 5px;
+    width: fit-content;
+    margin: 20px 5px 5px 5px;
     border: 2px solid rgb(194, 194, 194);
     background: rgb(194, 194, 194);
     padding: 10px;
@@ -216,21 +230,131 @@ h1,h3 {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1.3em;
+    color: #0d0c0c;
     
+}
+
+.button a{
+    color: #0d0c0c;
+    text-decoration: none;
+    font-size: 0.6em;
+    padding: 0;
 }
 
 .button:hover {
     transform: scale(1.05);
 }
 
+#contact {
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 30px auto;
+    margin: 30px auto;
+}
+
+.contact-detail {
+    text-align: center;
+    margin: 20px 10px;
+    flex: 1 1 calc(33.33% - 20px);
+    border-radius: 5px;
+    height: 50vh;
+    justify-content: center;
+    align-content: center;
+    padding-top: 100px;
+    font-size: 1.6em;
+}
+
+.contact-detail p{
+    padding: 10px;
+}
+
+.message-form {
+    box-shadow: 2px 2px 2px 2px #726f6f;
+    border: 2px solid #726f6f;
+    text-align: center;
+    margin: 20px 10px;
+    flex: 1 1 calc(33.33% - 20px);
+    border-radius: 5px;
+    height: 60vh;
+    justify-content: center;
+    font-size: 1.2em;
+    background: #c0bfbf;
+}
+
+.message-form h3 {
+    margin: 10px auto;
+}
+
+.message-form #name, #email {
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+}
+
+.message-form #message {
+    border-radius: 3px;
+    border: none;
+}
+
+.message-form #submit {
+    border: 2px solid rgb(194, 194, 194);
+    background: rgb(194, 194, 194);
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.message-form #submit:hover {
+    transform: scale(1.05);
+}
+
+.social-profile {
+    width: 100%;
+}
+.social-profile a{
+    margin: 20px;
+    color: #0d0c0c;
+    width: 20px;
+}
+
+.social-profile a i:hover{
+    transform: scale(1.1);
+    color: #726f6f;
+}
+
 footer {
-    margin: 10px 7%;
+    width: 100%;
+    margin:20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer span, address {
+    margin: 10px;
 }
 
 @media only screen and (max-width: 900px) {
     header {
         padding: 0 30px;
     }
+
+    #home-profile h3 {
+        margin-bottom: 25px;
+        font-size: 1.2em;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -277,6 +401,11 @@ footer {
         width: 90%;
         margin: auto;
     }
+
+    #home-profile h3 {
+        margin-bottom: 25px;
+        font-size: 1.1em;
+    }
    
     #home-img {
         width: 90%;
@@ -287,20 +416,31 @@ footer {
         margin: 0;
     }
 
-    .skills div {
+    #portfolio {
+        margin-top:190px;
+        padding: 70px auto;
+    }
+
+    .contact-container {
+        display: inline;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    .contact-detail {
+        padding-top: 30px;
+    }
+
+    .contact-detail {
+        padding-top: 50px;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        margin: 250px auto 20px auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 5px;
-    }
-
-    .skills > div > span {
-        flex: 0 0 calc(33.33% - 30px);
-        margin: 10px;
-    }
-
-    #portfolio {
-        margin-top:220px;
-        padding: 70px auto;
     }
 }

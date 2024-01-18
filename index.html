@@ -22,7 +22,7 @@
                     <a href="#portfolio" id="nav-link">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#resume" id="nav-link">Resume</a>
+                    <a href="STEPHEN ORYEMA RESUME.pdf" id="nav-link">Resume</a>
                 </li>
                 <li>
                     <a href="#contact" id="nav-link">Contact</a>
@@ -46,11 +46,7 @@
                 <p>
                     I am currently learning Node.js.
                 </p>
-                <div class="social-profile">                    
-                    <a target="_blank" href="mailto:oryemasteve9@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/oryema-stephen-76b891133/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://github.com/OryemaStephen"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-                </div>
+                <button type="button" class="button"> <a href="#contact">Let's Connect</a></button>                
             </div>
             <div id="home-img">
                 <img src="homepage.jpg" alt="Profile Photo" srcset="">
@@ -140,19 +136,42 @@
                 </button>
             </a>
         </section>
-
-        <section id="resume">
-            <h1>Resume</h1>
-        </section>
         <section id="contact">
-            <h1>Contact</h1>
+            <h1>Contact Me for Opportunities.</h1>
+            <div class="contact-container">
+                <div class="contact-detail">
+                    <p>+256771634966/+256750098228</p>
+                    <p>oryemasteve9@gmail.com</p>
+                    <div class="social-profile">                    
+                        <a target="_blank" href="mailto:oryemasteve9@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/oryema-stephen-76b891133/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        <a target="_blank" href="https://github.com/OryemaStephen"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <form class="message-form">
+                    <h3>Contact Form</h3>
+                    <label for="name">Name: </label><br />
+                    <input type="text" name="name" id="name" required><br/>
+                    <label for="email">Email: </label><br />
+                    <input type="email" name="email" id="email" required><br/>
+                    <label for="message">Message</label> <br />
+                    <textarea name="message" id="message" required placeholder="Enter your message here ..." cols="42" rows="5"></textarea><br />
+                    <input type="submit" id="submit" value="Submit" onclick="greeting()">
+                </form>
+            </div>
         </section>
     </main>
     <footer>
+        <span>&copy;<i id="copy"></i></span>
         <address>
-            <span>&copy;</span>
+            Kampala, Uganda             
         </address>
+        <span>Developed by  <a href="#home">Stephen Oryema</a></span>
     </footer>
     <script src="index.js"></script>
+    <script>
+        const today = new Date();
+        document.getElementById("copy").innerText= today.getFullYear();
+    </script>
 </body>
 </html>

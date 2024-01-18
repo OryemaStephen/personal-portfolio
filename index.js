@@ -17,21 +17,7 @@ document.querySelectorAll('#nav-link'.forEach(anchor=>{
     })
 }))
 
-// document.querySelectorAll('.nav-link').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-
-//         // Remove the 'active' class from all nav links
-//         document.querySelectorAll('.nav-link').forEach(link => {
-//             link.classList.remove('active');
-//         });
-
-//         // Add the 'active' class to the clicked nav link
-//         this.classList.add('active');
-
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
-
+function greeting(){
+    const name =document.getElementById('name').value;
+    alert("Thank you, " + name + " for your message")
+}
