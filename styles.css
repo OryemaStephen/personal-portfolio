@@ -220,30 +220,6 @@ h1,h3 {
     margin: 10px auto;
 }
 
-.button {
-    width: fit-content;
-    margin: 20px 5px 5px 5px;
-    border: 2px solid rgb(194, 194, 194);
-    background: rgb(194, 194, 194);
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.3em;
-    color: #0d0c0c;
-    
-}
-
-.button a{
-    color: #0d0c0c;
-    text-decoration: none;
-    font-size: 0.6em;
-    padding: 0;
-}
-
-.button:hover {
-    transform: scale(1.05);
-}
 
 #contact {
     width: 100%;
@@ -427,12 +403,25 @@ footer span, address {
         margin: 5px;
     }
 
+    #contact h1 {
+        width: 100%;
+        text-align: center;
+    }
+
     .contact-detail {
         padding-top: 30px;
     }
 
-    .contact-detail {
-        padding-top: 50px;
+    .contact-detail p{
+        font-size: 0.7em;
+    }
+
+    .message-form #name, #email {
+        width: 200px;
+    }
+
+    .message-form #message {
+        width: 200px;
     }
 
     footer {
@@ -443,4 +432,19 @@ footer span, address {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+@media only screen and (max-width: 480px) {
+    .main-body {
+        margin: auto;
+        padding: 70px 0 0 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    section, footer {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+    }  
 }

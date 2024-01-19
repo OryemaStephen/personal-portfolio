@@ -10,8 +10,7 @@ hamburger.addEventListener("click", () => {
 
 
 document.querySelectorAll('#nav-link'.forEach(anchor=>{
-    anchor.addEventListener('click',(e)=>{
-        e.preventDefault();
+    anchor.addEventListener('click',()=>{
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     })
