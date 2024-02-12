@@ -187,7 +187,8 @@ h1,h3 {
 }
 
 .portfolio-grid {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
