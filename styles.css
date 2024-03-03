@@ -66,16 +66,9 @@ header nav ul li a.active {
     background: #0d0c0c;
 }
 
-.main-body {
+main {
     margin: auto;
-    padding: 70px 0 0 0;
-    width: 90%;
-}
-
-section {
-    height: fit-content;
-    text-align: center;
-    padding-top: 70px;
+    width: 100%;
 }
 
 h1,h3 {
@@ -83,12 +76,24 @@ h1,h3 {
 }
 
 #home {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
-    align-content: center;
-    flex-wrap: wrap;
     height: fit-content;
+    padding-top: 70px;
+}
+
+#home-container{
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+}
+
+#profile-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #home-profile {

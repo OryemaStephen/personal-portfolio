@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">OS</div>
+        <div class="logo"><a href="#home">OS</a></div>
         <input type="checkbox" id="nav_check" hidden>
         <nav>
             <ul id="nav-menu">
@@ -35,30 +35,35 @@
             <div></div>
         </label>
     </header>
-    <main class="main-body">
+    <main>
         <section id="home">
-            <div id="home-profile">
-                <p>Hello, I am</p>
-                <h3>Oryema Stephen.</h3>
-                <p>
-                    A fullstack web developer with 2 years experience in JavaScript and Python.
-                </p>
-                <p>
-                    I am currently learning Node.js.
-                </p>
-                <button type="button" class="button"> <a href="#contact">Let's Connect</a></button>                
-            </div>
-            <div id="home-img">
-                <img src="homepage.jpg" alt="Profile Photo" srcset="">
-            </div>
-            <div class="skills">
-                <h3>Skills</h3>
-                <div class="skill-list">
-                    <span>JavaScript</span>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Node.JS</span>
-                    <span>SQL</span>
+            <div id="home-container">
+                <div id="profile-container">
+                    <div id="home-profile">
+                        <p>Hello, I am</p>
+                        <h3>Oryema Stephen.</h3>
+                        <p>
+                            A fullstack web developer with 2 years experience in JavaScript and Python.
+                        </p>
+                        <p>
+                            I am currently learning Node.js.
+                        </p>
+                        <button type="button" class="button"> <a href="#contact">Let's Connect</a></button>                
+                    </div>
+                    <div id="home-img">
+                        <img src="homepage.jpg" alt="Profile Photo" srcset="">
+                    </div>
+                </div>
+            
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="skill-list">
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                        <span>HTML</span>
+                        <span>Node.JS</span>
+                        <span>SQL</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -67,45 +72,55 @@
                 Portfolio  
             </h1>
             <div class="portfolio-grid">
-                <div class="portfolio-project">
-                    <a href="https://eatup256.netlify.app/" class="portfolio-link" target="_blank">
-                        <img class="protfolio-img" id="portfolio-img" src="Restaurant website.png" alt="Restaurant website photo.">
-                        <h4 class="portfolio-caption">                       
-                            EatUp Restaurant website.
-                        </h4>
-                        <p>
-                            Website to allow EatUp restaurant customers to see the menu and order food.
-                        </p>
-                        </a>
+                <div class="portfolio-project">                    
+                    <img class="protfolio-img" id="portfolio-img" src="Restaurant website.png" alt="My Shop website">
+                    <h4 class="portfolio-caption">                       
+                        My Shop website
+                    </h4>
+                    <p>
+                        An online shopping site where users order products.                        
+                    </p>
+                    <a href="https://myshop256.netlify.app/" target="_blank">Link</a>
+                    <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a>
+                </div>
+                <div class="portfolio-project">                    
+                    <img class="protfolio-img" id="portfolio-img" src="Restaurant website.png" alt="Restaurant website photo.">
+                    <h4 class="portfolio-caption">                       
+                        EatUp Restaurant website.
+                    </h4>
+                    <p>
+                        Website to allow EatUp restaurant customers to see the menu and order food.
+                    </p>
+                    <a href="https://eatup256.netlify.app/" target="_blank">Link</a>
+                    <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a>
                 </div>
                 <div class="portfolio-project">
-                    <a href="https://stephhomepage.netlify.app/" class="portfolio-link" target="_blank">
-                        <img class="protfolio-img" id="portfolio-img" src="landing-page.png" alt="Homepage for my website.">
-                        <h4 class="portfolio-caption">                       
-                            My browser homepage
-                        </h4>
-                        <p>
-                            My landing page for my browser for when I open the broswer.
-                        </p>
-                        </a>
-                </div>
-
-                <div class="portfolio-project">
-                    <a href="https://agrolimgroceriesug.netlify.app/" class="portfolio-link" target="_blank">
-                        <img class="protfolio-img" id="portfolio-img" src="agrolim.png" alt="Agrolim Groceries limited Uganda.">
-                        <h4 class="portfolio-caption">                       
-                            Agrolim Groceries Uganda
-                        </h4>
-                        <p>
-                            An online shopping application 
-                            that helps you get the item of your choice 
-                            delivered to your doorstep.
-                        </p>
-                    </a>
+                    <img class="protfolio-img" id="portfolio-img" src="landing-page.png" alt="Homepage for my website.">
+                    <h4 class="portfolio-caption">                       
+                        My browser homepage
+                    </h4>
+                    <p>
+                        My landing page for my browser for when I open the broswer.
+                    </p>
+                    <a href="https://stephhomepage.netlify.app/" target="_blank">Link</a>
+                    <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a>
                 </div>
 
                 <div class="portfolio-project">
-                    <a href="https://yoroom.netlify.app/" class="portfolio-link" target="_blank">
+                    <img class="protfolio-img" id="portfolio-img" src="agrolim.png" alt="Agrolim Groceries limited Uganda.">
+                    <h4 class="portfolio-caption">                       
+                        Agrolim Groceries Uganda
+                    </h4>
+                    <p>
+                        An online shopping application 
+                        that helps you get the item of your choice 
+                        delivered to your doorstep.
+                    </p>
+                    <a href="https://agrolimgroceriesug.netlify.app/" target="_blank">Link</a>
+                    <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a>                    
+                </div>
+
+                <div class="portfolio-project">
                         <img class="protfolio-img" id="portfolio-img" src="yorum.png" alt="Agrolim Groceries limited Uganda.">
                         <h4 class="portfolio-caption">                       
                             Yorum Technologies limited
@@ -113,7 +128,8 @@
                         <p>
                             This is a software-based solution that quickly matches tenants looking for rentals.
                         </p>
-                    </a>
+                        <a href="https://yoroom.netlify.app/" target="_blank">Link</a>
+                        <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a>         
                 </div>
 
                 <div class="portfolio-project">
@@ -126,11 +142,12 @@
                             The art of massage—a symphony of kneading and pressure, a 
                             tranquil journey to relaxation guided by a skilled therapist's hands. 
                         </p>
+                        <a href="https://yoroom.netlify.app/" target="_blank">Link</a>
+                        <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a> 
                     </a>
                 </div>
 
                 <div class="portfolio-project">
-                    <a href="https://bmicalculatorh.netlify.app/" class="portfolio-link" target="_blank">
                         <img class="portfolio-img" id="portfolio-img" src="bmi.png" alt="BMI Calculator.">
                         <h4 class="portfolio-caption">                       
                             BMI Calculator
@@ -138,7 +155,8 @@
                         <p>
                             BMI Calculator for kepping tab of your health. It helps categorize your status.
                         </p>
-                    </a>
+                        <a href="https://bmicalculatorh.netlify.app/" target="_blank">Link</a>
+                        <a href="https://myshop256.netlify.app/" target="_blank">GitHub</a> 
                 </div>
             </div>
         </section>

@@ -9,12 +9,12 @@ hamburger.addEventListener("click", () => {
 })
 
 
-document.querySelectorAll('#nav-link'.forEach(anchor=>{
+document.querySelectorAll('#nav-link').forEach(anchor=>{
     anchor.addEventListener('click',()=>{
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     })
-}))
+})
 
 function greeting(){
     const name =document.getElementById('name').value;
