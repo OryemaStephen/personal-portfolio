@@ -71,8 +71,8 @@ main {
     width: 100%;
 }
 
-h1,h3 {
-    text-transform: capitalize;
+h1,h2 {
+    text-transform: uppercase;
 }
 
 #home {
@@ -98,6 +98,7 @@ h1,h3 {
 
 #home-profile {
     width: 50%;
+    margin: auto;
     text-align: center;
     padding: 20px;
     font-size: 1.5em;
@@ -111,21 +112,9 @@ h1,h3 {
     margin-bottom: 25px;
     font-size: 1.4em;
     background: url(landing-page.png);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: rgba(0,0,0,.2);
-}
-
-#home-img {
-    width: 50%;
-    padding-top: 30px;
-}
-
-#home-img img {
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    border: 1px solid rgb(117, 119, 121);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
 }
 
 #home-profile .button {
@@ -152,19 +141,35 @@ h1,h3 {
     transform: scaleX(1.05);
 }
 
-.skills {
-    margin: 10px auto;
-    width: 100%;
-    height: fit-content;
+#home-img {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
 }
 
-.skills h3{
+#home-img img {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgb(117, 119, 121);
+}
+
+.skills {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.skills h2{
     font-size: 1.7em;
     margin: 20px auto;
     font-weight: bold;
+    text-transform: uppercase;
 }
+
 .skill-list {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -173,7 +178,7 @@ h1,h3 {
 }
 .skill-list > span{
     font-size: 1.3em;
-    margin: 20px 10px;
+    margin: 10px;
     border: 2px solid rgb(194, 194, 194);
     background: rgb(194, 194, 194);
     padding: 10px;
@@ -181,62 +186,86 @@ h1,h3 {
     flex: 0 0 calc(33.33% - 30px);
 }
 
-#portfolio {
+#portfolio{
     width: 100%;
-    color: #0d0c0c;
+    height: fit-content;
+    padding-top: 80px;
+    
+}
+
+#portfolio-container{
+    width: 90%;
+    margin:0 auto;
 }
 
 #portfolio-header{
     text-align: center;
-    margin: 10px 0;
+    padding-bottom: 20px;
 }
 
-.portfolio-grid {
+.portfolio-project-container{
     width: 100%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    margin:0 auto;
     justify-content: center;
-}
-
-.portfolio-project {
-    border: 2px solid rgb(194, 194, 194);
-    margin: 10px;
-    flex: 1 1 calc(33.33% - 20px);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    gap: 15px;
     padding-bottom: 20px;
-    min-width: 300px;
-    max-width: 400px;
 }
 
-.portfolio-project:hover {
-    transform: scale(1.05);
-    transition: ease-in-out;
-    transition-duration: 200ms;
+.portfolio-project{
+    flex: 1 0 32%;
+    height: fit-content;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(84, 82, 82, 0.3);
 }
 
-#portfolio-img{
+.portfolio-img{
     width: 100%;
-    height: 250px;
-    margin: 0;
-    opacity: 0.4;
+    height: 300px;
+    object-position: top;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.portfolio-project h4{
+    padding: 20px;
+    font-size: 1.3em;
+}
+
+.portfolio-project p{
+    padding-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.web-link{
+    padding-bottom: 20px;
+    font-size: 1.1em;
+    border: 1px solid #2F2F2F;
+    width: 200px;
+    border-radius: 5px;
+
+}
+
+.git-profile{
+    padding-bottom: 20px;
+    font-size: 1.1em;
+    border: 1px solid #2F2F2F;
+    width: 200px;
     border-radius: 5px;
 }
-
-.portfolio-link {
-   color: #0d0c0c;
-}
-
-.portfolio-link > p,h4 {
-    margin: 10px auto;
-}
-
 
 #contact {
     width: 100%;
     height: 100vh;
+    padding-top: 80px;
+    text-align: center;
 }
 
 .contact-container {
@@ -339,11 +368,6 @@ footer span, address {
         padding: 0 30px;
     }
 
-    #home-profile h3 {
-        margin-bottom: 25px;
-        font-size: 1.2em;
-    }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -367,7 +391,7 @@ footer span, address {
         left: -100%;
         top: 70px;
         background: #fff;
-        padding: 30px;
+        padding:10px 30px;
         transition: 0.3s;
     }
     header #nav_check:checked ~ nav {
@@ -380,35 +404,19 @@ footer span, address {
         margin: 5px 0;
     }
 
-    #home {
+    #profile-container{
         display: block;
         width: 100%;
-        height: 130vh;
-    }
-    
-    #home-profile {
-        width: 90%;
-        margin: auto;
+    } 
+
+    #home-profile, #home-img{
+        width: 100%;
     }
 
-    #home-profile h3 {
-        margin-bottom: 25px;
-        font-size: 1.1em;
-    }
-   
-    #home-img {
-        width: 90%;
-        margin: auto;
+    .portfolio-project{
+        flex: 1 0 50%;
     }
 
-    .skills > h3 {
-        margin: 0;
-    }
-
-    #portfolio {
-        margin-top:190px;
-        padding: 70px auto;
-    }
 
     .contact-container {
         display: inline;
@@ -448,11 +456,8 @@ footer span, address {
 }
 
 @media only screen and (max-width: 480px) {
-    .main-body {
-        margin: auto;
-        padding: 70px 0 0 0;
-        width: 100%;
-        overflow-x: hidden;
+    main {
+        padding-top: 70px ;
     }
     
     section, footer {
@@ -460,4 +465,12 @@ footer span, address {
         width: 90%;
         margin: auto;
     }  
+
+    #home-container{
+        width: 100%;
+    }
+
+    .portfolio-project{
+        flex: 1 0 100%;
+    }
 }
