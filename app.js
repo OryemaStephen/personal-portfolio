@@ -36,5 +36,5 @@ document.querySelectorAll('.nav-menu a').forEach(anchor => {
 
 function greeting(){
     const name =document.getElementById('name').value;
-    alert("Thank you, " + name + " for your message")
+    alert("Thank you, " + name + " for your message.")
 }
