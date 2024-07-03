@@ -126,11 +126,11 @@ p{
     width: 50%;
     margin: auto;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 #home-profile > p {
-    margin: 15px;
+    margin-bottom: 20px;
 }
 
 #home-profile > h3{
@@ -168,7 +168,7 @@ p{
     width: 50%;
     margin: auto;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 #home-img img {
@@ -273,7 +273,7 @@ p{
 }
 
 .web-link{
-    width: 150px;
+    width: 100px;
     padding: 5px 5px;
     text-decoration: none;
     background-color: #b8b8b8;
@@ -290,37 +290,19 @@ p{
     color: #b8b8b8;
 }
 
-.git-profile{
-    width: 150px;
-    color: #000;
-    padding: 5px 5px;
-    text-decoration: none;
-    background-color: #b8b8b8;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 5px auto;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.git-profile:hover{
-    background-color: #000;
-    color: #b8b8b8;
-}
-
 #contact {
     width: 100%;
     height: fit-content;
     padding-top: 70px;
-    text-align: center;
 }
 
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 .contact-detail {
@@ -467,8 +449,13 @@ footer span, address {
         width: 100%;
     }
 
+    .portfolio-project-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .portfolio-project{
-        flex: 1 1 50%;
+        flex: 1 0 50%;
     }
 
     #contact{
@@ -522,6 +509,11 @@ footer span, address {
         font-size: 1.3em;
         width: 80%;
         margin: 10px auto;
+    }
+
+    .portfolio-project-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .portfolio-project{
