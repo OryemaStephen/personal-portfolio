@@ -184,6 +184,13 @@ p{
     text-align: center;
 }
 
+#services{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .skills h2{
     margin: 20px auto;
     font-weight: bold;
@@ -238,6 +245,7 @@ p{
 
 .portfolio-project{
     flex: 1 1 32%;
+    max-width: 400px;
     height: fit-content;
     text-align: center;
     border-bottom-left-radius: 10px;
@@ -246,6 +254,13 @@ p{
     margin-top: 20px;
     padding-bottom: 20px;
     box-shadow: 0 10px 20px rgba(84, 82, 82, 0.3);
+    transition: margin 500ms ease-in-out, box-shadow 500ms ease-in-out;
+}
+
+.portfolio-project:hover{
+    margin-top: 1px;
+    margin-bottom: 19px; 
+    box-shadow: 0 15px 30px rgba(84, 82, 82, 0.5);
 }
 
 .portfolio-img{
