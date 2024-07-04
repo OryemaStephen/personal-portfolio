@@ -17,16 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.forEach(link => link.classList.remove('active'));
             anchor.classList.add('active');
 
-            const targetId = anchor.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-
             // Close the menu if it's open
-            hamburger.classList.remove("active");
             navMenu.classList.remove("active");
         });
     });
