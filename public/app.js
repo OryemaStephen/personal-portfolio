@@ -1,6 +1,8 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
 
     // Toggle hamburger
     hamburger.addEventListener("click", () => {
@@ -9,7 +11,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
     // Smooth scroll and highlight clicked menu
-    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function() {
             // Highlight clicked menu
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
-            });            
+            });
 
             // Close the menu if it's open
             hamburger.classList.remove("active");
@@ -30,9 +31,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     });
 
+    // Highlight menu based on section position
+    const observerOptions = {
+        root: null,
+        rootMargin: '-80px 0px -90% 0px',
+        threshold: 0
+    };
 
-    function greeting(){
-        const name =document.getElementById('name').value;
-        alert("Thank you, " + name + " for your message.")
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    function greeting() {
+        const name = document.getElementById('name').value;
+        alert("Thank you, " + name + " for your message.");
     }
-})
+});

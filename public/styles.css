@@ -5,6 +5,9 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+}
+
+html{
     scroll-behavior: smooth;
 }
 
@@ -105,6 +108,7 @@ p{
     width: 100%;
     height: fit-content;
     padding-top: 70px;
+    scroll-margin-top: 70px;
 }
 
 #home-container{
@@ -131,6 +135,7 @@ p{
 
 #home-profile > p {
     margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 #home-profile > h3{
@@ -188,12 +193,20 @@ p{
     gap: 10px;
 }
 
-.skills > #services > div{
+.skills > #services > div {
     flex: 1 1 32%;
     background-color: rgb(194, 194, 194);
     padding: 10px;
     border-radius: 5px;
+    transition: margin 500ms ease-in-out, box-shadow 500ms ease-in-out;
 }
+
+.skills > #services > div:hover {
+    margin-top: -10px;
+    margin-bottom: 10px; 
+    box-shadow: 0 15px 30px rgba(84, 82, 82, 0.5);
+}
+
 
 .skills > #services > div > span{
     display: flex;
@@ -249,7 +262,7 @@ p{
 #portfolio{
     width: 100%;
     height: fit-content;
-    padding-top: 70px;
+    scroll-margin-top: 70px;
     
 }
 
@@ -338,7 +351,7 @@ p{
 #contact {
     width: 100%;
     height: fit-content;
-    padding-top: 70px;
+    scroll-margin-top: 70px;
 }
 
 .contact-container {
