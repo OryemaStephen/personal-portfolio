@@ -181,20 +181,50 @@ p{
 .skills {
     margin: 20px auto;
     width: 100%;
-    text-align: center;
 }
-
-#services{
+.skills > #services{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+}
+
+.skills > #services > div{
+    flex: 1 1 32%;
+    background-color: rgb(194, 194, 194);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.skills > #services > div > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+}
+
+.skills > #services > div > span > img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.skills > #services > div > h4{
+    text-align: center;
+    padding: 20px;
+}
+
+.skills > #services > div > p{
+    text-align: justify;
+    padding: 5px;
 }
 
 .skills h2{
     margin: 20px auto;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .skill-list {
@@ -464,13 +494,21 @@ footer span, address {
         width: 100%;
     }
 
+    .skills > #services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills > #services > div{
+        flex: 1 1 90%;
+    }
+
     .portfolio-project-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     .portfolio-project{
-        flex: 1 0 50%;
+        flex: 1 1 50%;
     }
 
     #contact{
@@ -514,6 +552,15 @@ footer span, address {
 
     #home-img img{
         width: 300px;
+    }
+
+    .skills > #services{
+        display: flex;
+        flex-direction: column;
+    }
+    .skills > #services > div{
+        width: 90%;
+        margin: auto;
     }
 
     .skill-list {
